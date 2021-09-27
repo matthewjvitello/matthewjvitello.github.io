@@ -81,7 +81,11 @@ else{return false}}}};},"Static");Class(function Events(c){this.events={};var b=
 
   /* Insert Image Here */
   function f(){
-    g.texture=LoadHomeImage.getTexture("assets/images/home/product.jpg");
+    if(window.innerWidth >= 770) {
+      g.texture=LoadHomeImage.getTexture("assets/images/home/home-bg.jpg");
+    } else {
+      g.texture=LoadHomeImage.getTexture("assets/images/home/home-bg-mobile.jpg");
+    }
   }
 
   });Class(function Plane(b){Inherit(this,MVC);var h=this;var f,g;this.scene=new THREE.Object3D();(function(){e();a();c()})();function e(){g=h.initClass(Shader,"BGImage","BGImage");g.uniforms={aspect:{type:"fv1",value:[]},}}
